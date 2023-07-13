@@ -1,0 +1,42 @@
+2023-07-11 16:56:52.796 CEST [22918] LOG:  starting PostgreSQL 14.7 (Homebrew) on aarch64-apple-darwin22.1.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2023-07-11 16:56:52.797 CEST [22918] LOG:  listening on IPv6 address "::1", port 5432
+2023-07-11 16:56:52.797 CEST [22918] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-07-11 16:56:52.798 CEST [22918] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-07-11 16:56:52.800 CEST [22919] LOG:  database system was shut down at 2023-07-11 16:56:48 CEST
+2023-07-11 16:56:52.801 CEST [22918] LOG:  database system is ready to accept connections
+2023-07-11 16:57:09.116 CEST [22970] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:57:10.795 CEST [22979] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:57:11.645 CEST [22981] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:57:20.321 CEST [23028] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:57:38.519 CEST [23091] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:57:38.710 CEST [23093] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:58:18.973 CEST [23170] FATAL:  role "postgres" does not exist
+2023-07-11 16:58:33.653 CEST [23196] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:58:33.981 CEST [23198] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:58:35.004 CEST [23201] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:58:35.359 CEST [23203] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:59:18.180 CEST [23360] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:59:18.214 CEST [23362] FATAL:  database "freelance-moi" does not exist
+2023-07-11 16:59:18.397 CEST [23368] ERROR:  relation "_prisma_migrations" does not exist at character 126
+2023-07-11 16:59:18.397 CEST [23368] STATEMENT:  SELECT "id", "checksum", "finished_at", "migration_name", "logs", "rolled_back_at", "started_at", "applied_steps_count" FROM "_prisma_migrations" ORDER BY "started_at" ASC
+2023-07-12 11:05:45.179 CEST [45440] LOG:  could not receive data from client: Connection reset by peer
+2023-07-12 11:06:12.025 CEST [45548] ERROR:  null value in column "id" of relation "User" violates not-null constraint
+2023-07-12 11:06:12.025 CEST [45548] DETAIL:  Failing row contains (null, Brian Ridolce, brianridolce@gmail.com, null, 2023-07-12 09:06:12.021, 2023-07-12 09:06:12.021, t, null, https://lh3.googleusercontent.com/a/AAcHTtdrovpSN3RnP8Mk1VziY8d1...).
+2023-07-12 11:06:12.025 CEST [45548] STATEMENT:  INSERT INTO "public"."User" ("name","email","emailVerified","image","createdAt","updatedAt","available") VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING "public"."User"."id"
+2023-07-12 11:07:34.139 CEST [45548] ERROR:  null value in column "id" of relation "User" violates not-null constraint
+2023-07-12 11:07:34.139 CEST [45548] DETAIL:  Failing row contains (null, Brian Ridolce, brianridolce@gmail.com, null, 2023-07-12 09:07:34.139, 2023-07-12 09:07:34.139, t, null, https://lh3.googleusercontent.com/a/AAcHTtdrovpSN3RnP8Mk1VziY8d1...).
+2023-07-12 11:07:34.139 CEST [45548] STATEMENT:  INSERT INTO "public"."User" ("name","email","emailVerified","image","createdAt","updatedAt","available") VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING "public"."User"."id"
+2023-07-12 11:16:19.582 CEST [46800] ERROR:  insert or update on table "User" violates foreign key constraint "User_id_fkey"
+2023-07-12 11:16:19.582 CEST [46800] DETAIL:  Key (id)=(1) is not present in table "Competency".
+2023-07-12 11:16:19.582 CEST [46800] STATEMENT:  INSERT INTO "public"."User" ("name","email","emailVerified","image","createdAt","updatedAt","available") VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING "public"."User"."id"
+2023-07-12 11:21:43.500 CEST [47378] ERROR:  insert or update on table "User" violates foreign key constraint "User_id_fkey"
+2023-07-12 11:21:43.500 CEST [47378] DETAIL:  Key (id)=(2) is not present in table "Competency".
+2023-07-12 11:21:43.500 CEST [47378] STATEMENT:  INSERT INTO "public"."User" ("name","email","emailVerified","image","createdAt","updatedAt","available") VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING "public"."User"."id"
+2023-07-12 11:22:33.603 CEST [47378] ERROR:  insert or update on table "User" violates foreign key constraint "User_id_fkey"
+2023-07-12 11:22:33.603 CEST [47378] DETAIL:  Key (id)=(3) is not present in table "Competency".
+2023-07-12 11:22:33.603 CEST [47378] STATEMENT:  INSERT INTO "public"."User" ("name","email","emailVerified","image","createdAt","updatedAt","available") VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING "public"."User"."id"
+2023-07-13 12:18:04.734 CEST [41182] FATAL:  role "admin_db" does not exist
+2023-07-13 12:18:18.976 CEST [41218] FATAL:  role "admin_db" does not exist
+2023-07-13 12:18:55.981 CEST [41380] FATAL:  role "admin_db" does not exist
+2023-07-13 12:21:48.165 CEST [42167] FATAL:  role "admin_db" does not exist
+2023-07-13 12:23:04.758 CEST [42598] FATAL:  database "nata" does not exist
