@@ -1,6 +1,6 @@
-import client from "../../../lib/prismadb";
+import client from "../../lib/prismadb";
 
-export default async function user(req, res) {
+export default async function handler(req, res) {
   const user = await client.user.findUnique({
     where: {
       id: req.query.id,
