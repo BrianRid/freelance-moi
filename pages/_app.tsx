@@ -1,17 +1,20 @@
 import "../styles/globals.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
 import React, { ReactNode } from "react";
 import type { Session, User } from "@prisma/client";
 import AppContext from "../context/state";
 import PrivateLayout from "../layouts/PrivateLayout";
 import PublicLayout from "../layouts/PublicLayout";
+import theme_extend from "../utils/global/chakra-theme";
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }) {
   const [user, setUser] = React.useState<User>();
+
+  const theme = extendTheme(theme_extend);
 
   const updateUser = (user: User) => {
     setUser(user);
@@ -33,7 +36,7 @@ export default function App({
   return (
     <AppContext.Provider value={contextValues}>
       <SessionProvider session={session}>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
           {getLayout(<Component {...pageProps} />)}
         </ChakraProvider>
       </SessionProvider>
