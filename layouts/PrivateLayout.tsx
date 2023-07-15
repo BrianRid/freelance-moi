@@ -6,8 +6,6 @@ import AppContext from "../context/state";
 const PrivateLayout = ({ children }: { children: ReactNode }) => {
   const { user } = useContext(AppContext);
 
-  console.log("ici");
-
   return (
     <Box>
       <Navbar user={user} />
